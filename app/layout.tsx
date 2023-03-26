@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Navbar from './components/NavBar'
 import './globals.css'
 
@@ -15,7 +16,10 @@ export default function RootLayout({
       <head />
       <body className='bg-gray-200'>
         <Navbar/>
-        {children}
+        <div className='mt-16 mx-20'>
+          {children}
+          <Footer/>
+        </div>
       </body>
     </html>
   )
