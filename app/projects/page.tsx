@@ -3,7 +3,7 @@ export default function Projects()
 {
     return (
         <div>
-            Projects page
+            Soon I will upload my projects :p
         </div>
     );
 }

@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between xl:justify-center">
         <div className="m-0 w-full lg:w-1/2">
             <h1 className="text-7xl font-bold text-slate-900 leading-tight">Hey<br/>I'm Joel<br/>Software Developer</h1>
             <p className="mt-6 text-lg text-slate-500">I design, develop and maintain web applications in NextJS 13 and mostly with Python in the backend.
