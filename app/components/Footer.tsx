@@ -1,7 +1,7 @@
 export default function Footer()
 {
     return (
-        <div className="mt-16">
+        <footer className="relative mt-10 w-full">
             <hr className="border border-slate-300 mb-6"/>
             <div className="flex justify-between text-slate-500">
                 <div>&#169; Joel Torres</div>
@@ -10,6 +10,6 @@ export default function Footer()
                 </div>
                 <div></div>
             </div>
-        </div>
+        </footer>
     );
 }

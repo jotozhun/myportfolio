@@ -16,8 +16,11 @@ export default function RootLayout({
       <head />
       <body className='bg-gray-200'>
         <Navbar/>
-        <div className='mt-16 mx-20'>
-          {children}
+        <div className='mt-6 mx-4 sm:mx-14 flex flex-col justify-between'>
+          <div className='max-w-screen-xl
+                          lg:self-center'>
+            {children}
+          </div>
           <Footer/>
         </div>
       </body>
