@@ -2,7 +2,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const projectsGeneralInfo = [
     {
-        image: "/generic_project_pic.jpg",
+        image: "https://thumbs2.imgbox.com/b4/60/05G8Cb3B_t.jpg",
         image_alt: "Vagrant project with multiple services",
         title: "Java application with services using Vagrant",
         description: "Java application hosted locally with Vagrant, using MySQL with Memcached, RabbitMQ, Tomcat server for the java app, and using Nginx as a load balancer of the application and end users.",
@@ -13,8 +13,9 @@ const projectsGeneralInfo = [
 ]
 
 export default function Projects() {
+
   return (
-    <div className="border border-black p-10 overflow-hidden space-y-4">
+    <div className="border border-slate-400 p-4 space-y-4">
       {projectsGeneralInfo.map((project, index) => {
         return <ProjectCard  key={index}
                              image={project.image}

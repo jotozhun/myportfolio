@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ProjectGeneralInfo } from "../types/ProjectTypes";
+import Link from "next/link";
 
 export default function ProjectCard({image,
                                     image_alt,
@@ -10,23 +11,35 @@ export default function ProjectCard({image,
                                     }: ProjectGeneralInfo)
 {
   return (
-    <div className="border border-slate-300 rounded-lg flex">
-      <Image
-        src={image}
-        width={200}
-        height={200}
-        alt={image_alt}
-      />
-      <div className="py-2 px-4 space-y-3">
-        <div className="space-y-1">
-          <h1 className="font-bold text-2xl">
+    <Link href="/projects"
+          className="border border-slate-300 rounded-lg overflow-hidden
+                    sm:flex
+                    lg:max-h-52">
+      <div className="p-4 sm:inline-block
+                      xl:w-fit xl:h-fit md:p-0 lg:min-w-max">
+        <Image
+          className="m-auto w-full"
+          src={image}
+          width={200}
+          height={200}
+          alt={image_alt}
+        />
+      </div>
+      <div className="py-2 px-4 space-y-3 overflow-hidden
+                      md:flex md:flex-col md:justify-between select-none">
+        <div className="space-y-1 overflow-hidden">
+          <h1 className="font-bold text-2xl text-center
+                         xl:text-3xl">
             {title}
           </h1>
-          <h2>
+          <h2 className="text-sm text-justify hidden
+                         lg:inline-block
+                         xl:text-reg">
             {description}
           </h2>
         </div>
-        <div>
+        <div className="text-sm
+                        xl:text-reg">
           <h3>
             <b>Category:</b> {category}
           </h3>
@@ -35,7 +48,7 @@ export default function ProjectCard({image,
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

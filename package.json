@@ -9,12 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@firebase/firestore": "^3.10.0",
     "@next/font": "13.2.4",
+    "@prisma/client": "^4.12.0",
     "@types/node": "18.15.10",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
-    "firebase": "^9.19.0",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -23,6 +22,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
+    "prisma": "^4.12.0",
     "tailwindcss": "^3.2.4"
   }
 }
