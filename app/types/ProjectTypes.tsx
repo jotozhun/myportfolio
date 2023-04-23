@@ -1,17 +1,19 @@
+import { Category } from "@prisma/client";
+
 export class ProjectGeneralInfo{
     image: string;
     image_alt: string;
     title: string;
     description: string;
     category: string;
-    technologies: string[]
+    technologies: Category[]
 
     constructor(image: string,
                 image_alt: string,
                 title: string,
                 description: string,
                 category: string,
-                technologies: string[])
+                technologies: Category[])
     {
         this.image = image;
         this.image_alt = image_alt;
