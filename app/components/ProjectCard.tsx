@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ProjectGeneralInfo } from "../types/ProjectTypes";
+import { Category } from "@prisma/client";
 import Link from "next/link";
 
 export default function ProjectCard({image,
@@ -52,11 +53,11 @@ export default function ProjectCard({image,
   );
 }
 
-var showTechnologies = (technologies_list: string[]) => {
+var showTechnologies = (technologies_list: Category[]) => {
     let technologiesString = "";
     technologies_list.map((technology, index) => {
-        technologiesString += technology;
-        if(index < technologies_list.length)
+        technologiesString += technology.name;
+        if(index < technologies_list.length - 1)
             technologiesString += ", ";
     })
     technologiesString += ".";

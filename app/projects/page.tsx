@@ -1,4 +1,5 @@
 import ProjectCard from "../components/ProjectCard";
+import { prisma } from "../components/db";
 
 const projectsGeneralInfo = [
     {
@@ -12,18 +13,27 @@ const projectsGeneralInfo = [
     }
 ]
 
-export default function Projects() {
+const fetchProjects = async () => {
+  return prisma.project.findMany({
+    include: {
+      category: true,
+      skill: true
+    }
+  });
+};
 
+export default async function Projects() {
+  const projects = await fetchProjects();
   return (
     <div className="border border-slate-400 p-4 space-y-4">
-      {projectsGeneralInfo.map((project, index) => {
-        return <ProjectCard  key={index}
+      {projects.map((project) => {
+        return <ProjectCard  key={project.id}
                              image={project.image}
                              image_alt={project.image_alt}
                              title={project.title}
                              description={project.description}
-                             category={project.category}
-                             technologies={project.technologies}/>
+                             category={project.category.name}
+                             technologies={project.skill}/>
       })
       }
     </div>
